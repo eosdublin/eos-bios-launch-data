@@ -10,21 +10,22 @@ echo "Killing running nodes"
 killall nodeos
 
 echo "Phasing out any previous blockchain from disk"
-rm -rf ~/.eos/blocks ~/.eos/shared_mem
+rm -rf /var/opt/eos/scholar /var/opt/eos/shared_mem
 
 echo "Copying base config"
 # This one shouldn't contain any `producer-name` nor `private-key` nor `enable-stale-production` statements.
-cp base_config.ini ~/.eos/config.ini
+cp base_config.ini /etc/eos/scholar/config.ini
 
 echo "Writing genesis.json"
-echo $4 > ~/.eos/genesis.json
+echo $4 > /etc/eos/scholar/genesis.json
 
-echo "plugin = eosio::producer_plugin" >> ~/.eos/config.ini
+echo "plugin = eosio::producer_plugin" >> /etc/eos/scholar/config.ini
 # INSERT YOUR NODE NAME HERE:
-echo "producer-name = eosdublin" >> ~/.eos/config.ini
+echo "producer-name = eosdublin" >> /etc/eos/scholar/config.ini
 
-echo "private-key = [\"$2\",\"$3\"]" >> ~/.eos/config.ini
+echo "private-key = [\"$2\",\"$3\"]" >> /etc/eos/scholar/config.ini
 
 # Replace this by some automated command to restart the node.
 echo "CONFIGURATION DONE: Re/start nodeos, and press ENTER"
+# ~/bin/scripts/restart_scholar.sh
 read
