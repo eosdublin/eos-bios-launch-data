@@ -13,7 +13,7 @@ contracts:
     abi_path: ~/bin/eos-bios-launch-data/contracts/eosio.token.abi
 
 opening_balances:
-  snapshot_path: ~/bin/eos-bios-launch-data/snapshot/snapshot_290.csv
+  snapshot_path: /home/ubuntu/bin/eos-bios-launch-data/snapshot/snapshot_290.csv
 
 producer:
   my_account: eosdublin
