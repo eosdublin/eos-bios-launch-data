@@ -1,19 +1,19 @@
 contracts:
   eosio.system:
-    code_path: ./contracts/eosio.system.wasm
-    abi_path: ./contracts/eosio.system.abi
+    code_path: ~/bin/eos-bios-launch-data/contracts/eosio.system.wasm
+    abi_path: ~/bin/eos-bios-launch-data/contracts/eosio.system.abi
   eosio.bios:
-    code_path: ./contracts/eosio.bios.wasm
-    abi_path: ./contracts/eosio.bios.abi
+    code_path: ~/bin/eos-bios-launch-data/contracts/eosio.bios.wasm
+    abi_path: ~/bin/eos-bios-launch-data/contracts/eosio.bios.abi
   eosio.msig:
-    code_path: ./contracts/eosio.msig.wasm
-    abi_path: ./contracts/eosio.msig.abi
+    code_path: ~/bin/eos-bios-launch-data/contracts/eosio.msig.wasm
+    abi_path: ~/bin/eos-bios-launch-data/contracts/eosio.msig.abi
   eosio.token:
-    code_path: ./contracts/eosio.token.wasm
-    abi_path: ./contracts/eosio.token.abi
+    code_path: ~/bin/eos-bios-launch-data/contracts/eosio.token.wasm
+    abi_path: ~/bin/eos-bios-launch-data/contracts/eosio.token.abi
 
 opening_balances:
-  snapshot_path: ./snapshot/snapshot_290.csv
+  snapshot_path: ~/bin/eos-bios-launch-data/snapshot/snapshot_290.csv
 
 producer:
   my_account: eosdublin
@@ -57,17 +57,17 @@ pgp:
 
 hooks:
   init:
-    exec: ./hooks/init.sh
+    exec: ~/bin/eos-bios-launch-data/hooks/init.sh
   start_bios_boot:
-    exec: ./hooks/start_bios_boot.sh
+    exec: ~/bin/eos-bios-launch-data/hooks/start_bios_boot.sh
   connect_as_abp:
-    exec: ./hooks/connect_as_abp.sh
+    exec: ~/bin/eos-bios-launch-data/hooks/connect_as_abp.sh
   connect_as_participant:
-    exec: ./hooks/connect_as_participant.sh
+    exec: ~/bin/eos-bios-launch-data/hooks/connect_as_participant.sh
   publish_kickstart_data:
-    exec: ./hooks/publish_kickstart_data.sh
+    exec: ~/bin/eos-bios-launch-data/hooks/publish_kickstart_data.sh
   done:
-    exec: ./hooks/done.sh
+    exec: ~/bin/eos-bios-launch-data/hooks/done.sh
 
 # NOTE: take these out for production !
 
